@@ -1,4 +1,7 @@
 import math
+import time
+startTime = time.time()
+
 def is_prime(num):
 	if num % 2 == 0 and num != 2:
 		return 2, num/2
@@ -21,3 +24,4 @@ factors.append(result[1])
 print factors
 print max(factors)
 
+print(time.time()-startTime)
