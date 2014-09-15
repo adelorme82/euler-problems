@@ -1,4 +1,7 @@
 import math
+import time
+startTime = 0
+
 known_factors = {0: [None, None], 
 1: [1, dict()], 
 2: [2, {2:1}], 
@@ -77,6 +80,14 @@ def find_factors(num):
 		known_factors[num] = [2, {num:1}]
 	return total if total else 2
 
+def start_time():
+	global startTime
+	startTime = time.time()
+
+def stop_time():
+	global startTime
+	# print startTime
+	print "time: ", time.time() - startTime
 # print find_factors(32558400)
 # print known_factors[32558400]
 
